@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/0.21.0/math.min.js"></script>
+	<script src="jquery.cookie.js" type="text/javascript"></script>
+	<script src="common.js" type="text/javascript"></script>
+	<script src="view-controller.js" type="text/javascript"></script>
+	<script src="main.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<div id="zoomBox"></div>
+	<div id="infoBox">
+		<div class="infoElement">
+			<span id="status">Status: Done</span>
+		</div>
+		<div class="infoElement" id="size">
+			Size: 0px
+		</div>
+		<div class="infoElement">
+			Location Information: <br/>
+			<div class="location">
+				Real :[<span id="locationStartReal">0</span>,
+				<span id="locationEndReal"></span>]
+				<br/>
+
+				Imaginary: [<span id="locationStartImaginary"></span>i,
+				<span id="locationEndImaginary"></span>i]
+				<br/>
+
+				Cursor: <span id="cursorLocation"></span>
+				<br/>
+
+				<span id="countValue"></span>
+				<div id="countValueColor"></div>
+				
+
+				<fieldset id="savedLocationsFieldset">
+					<legend>Saved Locations</legend>
+					<table id="savedLocationsTable">
+					</table>
+				</fieldset>
+			</div>
+		</div>
+		<div class="infoElement">
+			Iterations: <input id="iterationSlider" type="range" name="iterations" value="100" min="5" max="750"/>
+			<span id="iterationSliderValue">100</span>
+		</div>
+		<div class="infoElement">
+			Exponent: <input id="exponentSlider" type="range" name="exponent" value="200" min="100" max="1000"/>
+			<span id="exponentSliderValue">2.0</span>
+		</div>
+		<div class="infoElement">
+			Hue: <input id="hueSlider" type="range" name="hueOffset" value="360" min="0" max="360" />
+			<span id="hueSliderValue">360</span><br/>
+			<canvas id="huePreviewCanvas">Your browswer does not support the canvas tag. Please switch to chrome.</canvas>
+		</div>
+		<div class="infoElement">
+			Coloring type:
+			<label><input class="coloringType" type="radio" name="coloringRadio" value="0" /> Dynamic</label>
+			<label><input class="coloringType" type="radio" name="coloringRadio" value="1" checked /> Static</label>
+		</div>
+		<div class="infoElement">
+			<label><input id="fullscreenCheckbox" type="checkbox" name="fullscren">Fullscreen</label>
+		</div>
+		<div class="infoElement">
+			<input id="redrawButton" type="Submit" value="Redraw" />
+			<input id="saveImageButton" type="Submit" value="Save Image" />
+			<input id="saveLocationButton" type="Submit" value="Save Location" />
+			<input id="resetButton" type="Submit" value="Reset" />
+		</div>
+	</div>
+	<canvas id="canvas">Your browswer does not support the canvas tag. Please switch to chrome.</canvas>
+</body>
+</html>

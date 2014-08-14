@@ -1,0 +1,62 @@
+body { 
+	background-color: black;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	font-family: monospace;
+}
+
+button {
+	font-family: monospace;
+}
+
+html { 
+	height:100%; margin: 0; padding: 0;
+}
+
+td {
+	padding-right: 8px;
+}
+
+#savedLocationsFieldset {
+	display: inline-block;
+}
+
+#countValueColor {
+	width: 20px;
+	height: 20px;
+}
+
+#huePreviewCanvas {
+	width: 200px;
+	height: 45px;
+	margin-bottom: -30px;
+	margin-top: 10px;
+}
+
+#zoomBox {
+	width: 100px;
+	height: 100px;
+	background-color: rgba(0,0,255,0.3);
+	position: absolute;
+}
+#infoBox {
+	background-color: rgba(255,255,255,.8);
+	padding: 6px;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+}
+
+#status {
+	font-weight: bold;
+	font-size: 12pt;
+}
+
+.infoElement {
+	padding: 3px;
+}
+
+.location {
+	padding-left: 15px;
+}
